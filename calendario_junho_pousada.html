@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planejamento Junho 2025 — Pousada das Missões</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --laranja: #E07B20;
+  --verde: #1A6B2F;
+  --marrom: #5C3A1E;
+  --amarelo: #F5A623;
+  --rosa: #C2185B;
+  --junino: #B8860B;
+  --preto: #111111;
+  --branco: #FFFFFF;
+  --cinza-claro: #F4F1EC;
+  --cinza-medio: #E2DDD6;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Nunito', sans-serif; background: var(--cinza-claro); color: var(--preto); }
+
+.header { background: var(--preto); padding: 28px 32px 24px; position: relative; overflow: hidden; }
+.header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, var(--laranja), var(--amarelo), var(--verde)); }
+.header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.header-logo { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--branco); letter-spacing: 2px; }
+.header-logo span { color: var(--laranja); }
+.header-badge { background: var(--laranja); color: var(--branco); font-size: 12px; font-weight: 800; padding: 6px 14px; border-radius: 20px; letter-spacing: 1px; text-transform: uppercase; }
+.header-title { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--branco); letter-spacing: 3px; margin-top: 12px; line-height: 1; }
+.header-title span { color: var(--laranja); }
+.header-sub { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 6px; font-weight: 600; }
+
+.stats-bar { background: var(--laranja); padding: 14px 32px; }
+.stats-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 32px; flex-wrap: wrap; }
+.stat { display: flex; align-items: center; gap: 8px; color: var(--branco); font-size: 13px; font-weight: 700; }
+.stat-num { font-family: 'Bebas Neue', sans-serif; font-size: 22px; }
+
+.main { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+.bloco { margin-bottom: 40px; }
+.bloco-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; padding: 14px 20px; border-radius: 10px; }
+.bloco-header.b1 { background: var(--laranja); }
+.bloco-header.b2 { background: var(--rosa); }
+.bloco-header.b3 { background: var(--junino); }
+.bloco-header.b4 { background: var(--verde); }
+.bloco-header.b5 { background: var(--marrom); }
+.bloco-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: rgba(255,255,255,0.3); letter-spacing: 2px; line-height: 1; }
+.bloco-info { flex: 1; }
+.bloco-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--branco); letter-spacing: 2px; }
+.bloco-sub { font-size: 11px; color: rgba(255,255,255,0.7); font-weight: 600; margin-top: 2px; }
+.bloco-count { background: rgba(255,255,255,0.2); color: var(--branco); font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+.card { background: var(--branco); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.07); transition: transform 0.2s, box-shadow 0.2s; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+.card-top { padding: 16px 18px 12px; border-bottom: 1px solid var(--cinza-medio); display: flex; align-items: flex-start; gap: 12px; }
+.card-num { font-family: 'Bebas Neue', sans-serif; font-size: 36px; color: var(--laranja); line-height: 1; min-width: 38px; }
+.card-num.rosa { color: var(--rosa); }
+.card-num.junino { color: var(--junino); }
+.card-num.verde { color: var(--verde); }
+.card-num.marrom { color: var(--marrom); }
+.card-info { flex: 1; }
+.card-titulo { font-size: 14px; font-weight: 800; color: var(--preto); line-height: 1.3; }
+.card-semana { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+.semana-meiosemana { background: #FEF3E0; color: #C06010; }
+.semana-namorados { background: #FCE4EC; color: #AD1457; }
+.semana-junina { background: #FFF8E1; color: #F57F17; }
+.semana-historia { background: #E8F4EC; color: #1A6B2F; }
+.semana-agencias { background: #EDE7F6; color: #4527A0; }
+
+.paginas { padding: 14px 18px 16px; }
+.paginas-label { font-size: 10px; font-weight: 800; color: var(--cinza-medio); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+.pagina { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed var(--cinza-medio); }
+.pagina:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.pag-badge { display: inline-block; font-size: 9px; font-weight: 800; padding: 2px 7px; border-radius: 4px; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+.pag-capa { background: var(--preto); color: var(--branco); }
+.pag-meio { background: var(--verde); color: var(--branco); }
+.pag-cta { background: var(--laranja); color: var(--branco); }
+.pag-meio-rosa { background: var(--rosa); color: var(--branco); }
+.pag-meio-junino { background: var(--junino); color: var(--branco); }
+.pag-titulo { font-size: 12px; font-weight: 800; color: var(--preto); margin-bottom: 2px; line-height: 1.3; }
+.pag-sub { font-size: 11px; font-weight: 600; color: #777; margin-bottom: 3px; line-height: 1.3; }
+.pag-texto { font-size: 10px; color: #555; line-height: 1.5; }
+
+.footer { background: var(--preto); padding: 24px 32px; text-align: center; margin-top: 20px; }
+.footer-txt { font-size: 12px; color: rgba(255,255,255,0.4); font-weight: 600; }
+.footer-txt span { color: var(--laranja); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-logo">Pousada das <span>Missões</span></div>
+      <div class="header-title">PLANEJAMENTO <span>JUNHO</span> 2025</div>
+      <div class="header-sub">@pousadadasmissoes · São Miguel das Missões, RS</div>
+    </div>
+    <div class="header-badge">18 Carrosséis</div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-num">18</span> carrosséis planejados</div>
+    <div class="stat"><span class="stat-num">4–5</span> páginas por carrossel</div>
+    <div class="stat"><span class="stat-num">5</span> blocos temáticos</div>
+    <div class="stat"><span class="stat-num">4</span> semanas de conteúdo</div>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- BLOCO 1: MEIO DE SEMANA -->
+<div class="bloco">
+  <div class="bloco-header b1">
+    <div class="bloco-num">01</div>
+    <div class="bloco-info">
+      <div class="bloco-titulo">OCUPAÇÃO MEIO DE SEMANA</div>
+      <div class="bloco-sub">Foco no gargalo principal: segunda a quinta</div>
+    </div>
+    <div class="bloco-count">Posts 01 ao 04</div>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top"><div class="card-num">01</div><div class="card-info"><div class="card-titulo">3 motivos pra vir de segunda a quinta em junho</div><span class="card-semana semana-meiosemana">Meio de semana</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Fim de semana tá caro e cheio.</div><div class="pag-sub">Tem uma opção muito melhor.</div><div class="pag-texto">Vir de segunda a quinta muda completamente a experiência nas Missões. Arrasta e vê por quê.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Sem fila, sem pressa.</div><div class="pag-sub">As Ruínas quase que só pra você.</div><div class="pag-texto">No meio da semana você caminha no seu ritmo, sem turma atrapalhando a foto.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">Diária mais barata.</div><div class="pag-sub">Mesma pousada, mesmo café, outro preço.</div><div class="pag-texto">Condição especial pra quem tem flexibilidade de agenda.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 4</span><div class="pag-titulo">Benzimento da Dona Alzira sem pressa.</div><div class="pag-sub">A experiência mais marcante das Missões.</div><div class="pag-texto">No fim de semana ela fica sobrecarregada. No meio da semana você tem tempo de verdade com ela.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Consulta a data e vem.</div><div class="pag-sub">A gente confirma rápido.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num">02</div><div class="card-info"><div class="card-titulo">2 dias nas Missões no meio da semana — roteiro pronto</div><span class="card-semana semana-meiosemana">Meio de semana</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">2 dias nas Missões.</div><div class="pag-sub">Roteiro pronto pra você seguir.</div><div class="pag-texto">Sem precisar pesquisar nada. Dois dias no meio da semana organizados do jeito certo.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Dia 1, tarde: chegada e Ruínas.</div><div class="pag-sub">Pôr do sol no Patrimônio Mundial.</div><div class="pag-texto">Chega na pousada, deixa a mala e vai direto pro sítio arqueológico. Fica para o pôr do sol. À noite, Espetáculo de Luz e Som.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">Dia 2, manhã: fé e história.</div><div class="pag-sub">Benzimento + Fonte Missioneira.</div><div class="pag-texto">Café da manhã na pousada, benzimento com Dona Alzira e uma parada na Fonte antes do almoço. Sem pressa.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 4</span><div class="pag-titulo">Dia 2, tarde: Museu e Borrario.</div><div class="pag-sub">História por dentro e memória gaúcha.</div><div class="pag-texto">Museu Missioneiro logo após o almoço e Borrario Minhas Origens no final da tarde. Viagem inteira na memória.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Quer esse roteiro?</div><div class="pag-sub">Me chama que eu organizo tudo.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num">03</div><div class="card-info"><div class="card-titulo">Por que hospedar e não só passar de dia</div><span class="card-semana semana-meiosemana">Meio de semana</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Muita gente passa de dia.</div><div class="pag-sub">E perde o melhor das Missões.</div><div class="pag-texto">Quem passa só de dia vê a superfície. Quem fica uma noite vive as Missões de verdade.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">O pôr do sol nas Ruínas.</div><div class="pag-sub">Só quem fica vê.</div><div class="pag-texto">A luz do final da tarde nas pedras cria uma atmosfera que nenhuma foto captura direito.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">O Espetáculo de Luz e Som.</div><div class="pag-sub">À noite, a história ganha vida.</div><div class="pag-texto">Só acontece à noite. Só quem dorme por aqui consegue ver sem correria.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 4</span><div class="pag-titulo">Ruínas vazias de manhã cedo.</div><div class="pag-sub">Antes do movimento chegar.</div><div class="pag-texto">Quem dorme na pousada sai cedo e entra nas Ruínas com o sol baixo e quase ninguém por perto.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Uma noite muda a viagem.</div><div class="pag-sub">Reserve pelo WhatsApp.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num">04</div><div class="card-info"><div class="card-titulo">Quanto fica de Porto Alegre, Santa Maria e Santo Ângelo até as Missões</div><span class="card-semana semana-meiosemana">Meio de semana</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Tá mais perto do que você pensa.</div><div class="pag-sub">Distâncias reais até as Missões.</div><div class="pag-texto">Muita gente acha que é longe. Não é. E vale cada quilômetro.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Porto Alegre: 4h30.</div><div class="pag-sub">Sai de manhã, chega antes do almoço.</div><div class="pag-texto">Saindo às 7h de POA você está em São Miguel por volta das 11h30. Dá pra almoçar e ir direto pras Ruínas.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">Santa Maria: 2 horas. Santo Ângelo: menos de 1h.</div><div class="pag-sub">Vizinho do Patrimônio e ainda não foi?</div><div class="pag-texto">Quem é do noroeste gaúcho não tem desculpa. O único Patrimônio Mundial do sul fica a menos de uma hora.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 4</span><div class="pag-titulo">De segunda a quinta a estrada tá vazia.</div><div class="pag-sub">Viagem mais tranquila, destino mais silencioso.</div><div class="pag-texto">Fim de semana a BR fica carregada. Durante a semana você chega descansado.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Agenda uma data e vem.</div><div class="pag-sub">A gente confirma rápido.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BLOCO 2: DIA DOS NAMORADOS -->
+<div class="bloco">
+  <div class="bloco-header b2">
+    <div class="bloco-num">02</div>
+    <div class="bloco-info">
+      <div class="bloco-titulo">DIA DOS NAMORADOS — 12 DE JUNHO</div>
+      <div class="bloco-sub">Constrói desejo, antecipação e urgência de reserva</div>
+    </div>
+    <div class="bloco-count">Posts 05 ao 08</div>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top"><div class="card-num rosa">05</div><div class="card-info"><div class="card-titulo">2 dias nas Missões para dois — roteiro de Dia dos Namorados</div><span class="card-semana semana-namorados">Dia dos Namorados</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Dia dos Namorados diferente esse ano.</div><div class="pag-sub">Sem restaurante lotado, sem correria.</div><div class="pag-texto">Que tal passar o Dia dos Namorados num lugar que vai ficar na memória pra sempre?</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 2</span><div class="pag-titulo">Dia 1, tarde: pôr do sol nas Ruínas.</div><div class="pag-sub">Um cenário que nenhum jantar substitui.</div><div class="pag-texto">Chegam na pousada, vão direto pras Ruínas e ficam para o pôr do sol. Depois, o Espetáculo de Som e Luz.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 3</span><div class="pag-titulo">Dia 2, manhã: café caprichado e Dona Alzira.</div><div class="pag-sub">Sem pressa, só os dois.</div><div class="pag-texto">Café da manhã na pousada e uma visita à Dona Alzira. Experiência que quem foi nunca esquece.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 4</span><div class="pag-titulo">Quarto especial preparado pra vocês.</div><div class="pag-sub">Decoração, champanhe e carinho nos detalhes.</div><div class="pag-texto">A gente cuida dos detalhes pra você só precisar curtir o momento.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Vagas limitadas para junho.</div><div class="pag-sub">Não deixa pra última hora.</div><div class="pag-texto">Me chama no WhatsApp ou no direct e garante a data.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num rosa">06</div><div class="card-info"><div class="card-titulo">Por que as Missões é o destino de Dia dos Namorados mais subestimado do RS</div><span class="card-semana semana-namorados">Dia dos Namorados</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Gramado está na moda.</div><div class="pag-sub">Missões está na memória.</div><div class="pag-texto">Todo mundo vai pra Gramado no Dia dos Namorados. Quem vai pras Missões volta diferente.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 2</span><div class="pag-titulo">Único Patrimônio Mundial do sul do Brasil.</div><div class="pag-sub">UNESCO desde 1983.</div><div class="pag-texto">Você vai levar a pessoa que ama pra um lugar reconhecido pelo mundo inteiro.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 3</span><div class="pag-titulo">Pôr do sol e Espetáculo no mesmo dia.</div><div class="pag-sub">Só quem se hospeda consegue fazer os dois.</div><div class="pag-texto">Quem vem só de passagem perde um dos dois. Quem fica não perde nada.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 4</span><div class="pag-titulo">Silêncio, jardim e café caprichado.</div><div class="pag-sub">Clima de interior, longe do barulho.</div><div class="pag-texto">Às vezes o presente mais bonito é simplesmente tempo de qualidade junto.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Garante a data antes que esgote.</div><div class="pag-sub">Junho enche rápido.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num rosa">07</div><div class="card-info"><div class="card-titulo">O que você vai sentir no Dia dos Namorados nas Missões</div><span class="card-semana semana-namorados">Dia dos Namorados</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Tem presente que não cabe em caixa.</div><div class="pag-sub">Experiência que fica pra sempre.</div><div class="pag-texto">Esse Dia dos Namorados pode ser sobre algo maior do que flores e jantar.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 2</span><div class="pag-titulo">Friozinho de junho, cobertor e café quente.</div><div class="pag-sub">Aconchego de interior.</div><div class="pag-texto">Tem algo muito bonito em compartilhar o frio de junho num lugar silencioso e histórico.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 3</span><div class="pag-titulo">Caminhar entre as Ruínas de mãos dadas.</div><div class="pag-sub">300 anos de história ao redor de vocês.</div><div class="pag-texto">Um cenário que nenhuma decoração de restaurante consegue replicar.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">A gente prepara tudo pra vocês.</div><div class="pag-sub">Quarto especial, champanhe, café caprichado.</div><div class="pag-texto">Me chama no WhatsApp ou no direct e garante a data.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num rosa">08</div><div class="card-info"><div class="card-titulo">Casal nas Missões — experiência completa de dois dias</div><span class="card-semana semana-namorados">Dia dos Namorados</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Uma viagem que não precisa de pacote.</div><div class="pag-sub">2 dias nas Missões para dois.</div><div class="pag-texto">Sem resort caro. Dois dias aqui são uma das viagens mais marcantes do sul.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 2</span><div class="pag-titulo">Dia 1: chegada e pôr do sol.</div><div class="pag-sub">Ruínas com a luz do final da tarde.</div><div class="pag-texto">Chegam na pousada, deixam as malas e vão direto pras Ruínas. Pôr do sol nas pedras com quase ninguém.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 3</span><div class="pag-titulo">Dia 1, noite: Luz e Som.</div><div class="pag-sub">A história das Missões nas pedras.</div><div class="pag-texto">Depois do jantar, voltam pro espetáculo. Experiência que casal não esquece.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-rosa">Página 4</span><div class="pag-titulo">Dia 2: fé e silêncio.</div><div class="pag-sub">Benzimento e Fonte Missioneira.</div><div class="pag-texto">Café da manhã na pousada, benzimento com Dona Alzira e Fonte. Sem agenda. Só os dois e as Missões.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Reserve o quarto de vocês.</div><div class="pag-sub">Decoração especial se quiser. É só pedir.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BLOCO 3: FESTA JUNINA -->
+<div class="bloco">
+  <div class="bloco-header b3">
+    <div class="bloco-num">03</div>
+    <div class="bloco-info">
+      <div class="bloco-titulo">FESTA JUNINA — SÃO JOÃO</div>
+      <div class="bloco-sub">Conecta a data ao destino, atrai turismo de interior</div>
+    </div>
+    <div class="bloco-count">Posts 09 ao 11</div>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top"><div class="card-num junino">09</div><div class="card-info"><div class="card-titulo">Missões em junho tem sabor de interior de verdade</div><span class="card-semana semana-junina">Festa Junina</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Junho nas Missões é diferente.</div><div class="pag-sub">Interior de verdade, não de cenário.</div><div class="pag-texto">Aqui o friozinho de junho combina com fogueira, história e silêncio de qualidade.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-junino">Página 2</span><div class="pag-titulo">Festa Junina na região.</div><div class="pag-sub">Quadrilha, comida e tradição gaúcha.</div><div class="pag-texto">As festas juninas aqui têm aquele gosto de interior que a cidade não consegue imitar.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-junino">Página 3</span><div class="pag-titulo">Café da manhã no frio de junho.</div><div class="pag-sub">Aquele calor de casa de avó.</div><div class="pag-texto">Nosso café da manhã no inverno tem o aconchego que a gente procura sem saber.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-junino">Página 4</span><div class="pag-titulo">Ruínas no frio têm outro charme.</div><div class="pag-sub">Menos turista, mais contemplação.</div><div class="pag-texto">Junho é mês de baixa temporada. As Ruínas ficam quase só pra você.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Vem passar o São João nas Missões.</div><div class="pag-sub">A gente recebe você bem.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num junino">10</div><div class="card-info"><div class="card-titulo">Festa Junina + Ruínas: o roteiro de junho que ninguém está fazendo</div><span class="card-semana semana-junina">Festa Junina</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">E se o São João desse ano fosse diferente?</div><div class="pag-sub">Interior com história de 300 anos.</div><div class="pag-texto">Festa Junina em cidade grande é palco. Aqui é tradição de verdade.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-junino">Página 2</span><div class="pag-titulo">De manhã: Ruínas, Museu e Fonte.</div><div class="pag-sub">Patrimônio Mundial da Humanidade.</div><div class="pag-texto">A manhã nas Ruínas de junho é fria, silenciosa e linda. Nada de fila.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-junino">Página 3</span><div class="pag-titulo">À tarde: benzimento da Dona Alzira.</div><div class="pag-sub">Tradição de fé que emociona.</div><div class="pag-texto">No meio da semana ela tem tempo pra cada um. Experiência que quem veio nunca esquece.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-junino">Página 4</span><div class="pag-titulo">À noite: São João na região.</div><div class="pag-sub">Quadrilha, fogueira e comida de verdade.</div><div class="pag-texto">As festas juninas da região têm aquele sabor que a cidade não consegue copiar.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Monta esse roteiro com a gente.</div><div class="pag-sub">A pousada fica no centro de tudo.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num junino">11</div><div class="card-info"><div class="card-titulo">O frio de junho nas Missões tem outro sabor</div><span class="card-semana semana-junina">Festa Junina</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Frio bom é frio com história.</div><div class="pag-sub">São Miguel das Missões em junho.</div><div class="pag-texto">O inverno aqui tem um silêncio que a cidade não tem. As pedras guardam o calor do sol até o anoitecer.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-junino">Página 2</span><div class="pag-titulo">Ruínas com neblina de manhã.</div><div class="pag-sub">Cena que não tem no verão.</div><div class="pag-texto">Junho tem manhãs com névoa sobre as Ruínas. Fotografia e contemplação de outro nível.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio-junino">Página 3</span><div class="pag-titulo">Menos turista, mais experiência.</div><div class="pag-sub">Inverno é temporada mais tranquila.</div><div class="pag-texto">No inverno as Missões têm menos movimento. Você visita tudo com mais calma.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Vem passar o inverno nas Missões.</div><div class="pag-sub">A gente recebe você bem.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BLOCO 4: CURIOSIDADES HISTÓRICAS -->
+<div class="bloco">
+  <div class="bloco-header b4">
+    <div class="bloco-num">04</div>
+    <div class="bloco-info">
+      <div class="bloco-titulo">CURIOSIDADES HISTÓRICAS</div>
+      <div class="bloco-sub">Autoridade, educação e desejo pelo destino</div>
+    </div>
+    <div class="bloco-count">Posts 12 ao 16</div>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top"><div class="card-num verde">12</div><div class="card-info"><div class="card-titulo">O colégio que existia dentro das Ruínas</div><span class="card-semana semana-historia">Curiosidade histórica</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Você sabia que tinha escola aqui?</div><div class="pag-sub">Dentro das Ruínas existia um colégio de verdade.</div><div class="pag-texto">Não é metáfora. Era escola com salas de aula, recreio e livros vindos da Europa.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Do neolítico para a sala de aula.</div><div class="pag-sub">Jesuítas ensinaram a ler, escrever e calcular.</div><div class="pag-texto">Povos indígenas que viviam no neolítico aprenderam ciências, letras e números em poucos anos.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">A praça era o recreio.</div><div class="pag-sub">Crianças brincavam onde você vai caminhar.</div><div class="pag-texto">Aquela grande praça que você vê hoje era o pátio de recreio do colégio no século 17.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 4</span><div class="pag-titulo">Um dos sistemas de ensino mais avançados do continente.</div><div class="pag-sub">Tudo isso aqui no sul do Brasil.</div><div class="pag-texto">Enquanto a maioria da colônia era analfabeta, aqui formavam-se pessoas em ciências e ofícios.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Vem conhecer com calma.</div><div class="pag-sub">A pousada fica a 5 minutos das Ruínas.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num verde">13</div><div class="card-info"><div class="card-titulo">A Fonte Missioneira ainda brota hoje</div><span class="card-semana semana-historia">Curiosidade histórica</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Essa fonte tem 300 anos e ainda funciona.</div><div class="pag-sub">Original dos Sete Povos das Missões.</div><div class="pag-texto">A água que brotava no tempo dos jesuítas ainda brota no mesmo lugar.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Os Sete Povos tinham infraestrutura.</div><div class="pag-sub">Água encanada no século 17.</div><div class="pag-texto">Enquanto a Europa ainda lutava com higiene básica, os Sete Povos já tinham sistema de água organizado.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">Fé e símbolo.</div><div class="pag-sub">A fonte virou ponto de romaria.</div><div class="pag-texto">Muita gente vem de longe buscar essa água. Tradição que atravessou séculos.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Vem ver com os próprios olhos.</div><div class="pag-sub">A pousada fica a 5 minutos de tudo isso.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num verde">14</div><div class="card-info"><div class="card-titulo">O benzimento da Dona Alzira — a experiência mais marcante das Missões</div><span class="card-semana semana-historia">Curiosidade histórica</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Tem uma senhora nas Missões que ninguém esquece.</div><div class="pag-sub">Dona Alzira e o benzimento tradicional.</div><div class="pag-texto">Quem foi fala que é a experiência mais marcante de toda a viagem. Sem exagero.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Tradição de fé que atravessou gerações.</div><div class="pag-sub">Raiz missioneira ainda viva.</div><div class="pag-texto">O benzimento é uma prática antiga da cultura local que Dona Alzira preserva com muita devoção.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">No meio da semana ela tem tempo pra cada um.</div><div class="pag-sub">Fim de semana ela fica sobrecarregada.</div><div class="pag-texto">Vir de segunda a quinta garante uma experiência mais íntima e sem pressa.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Inclui no teu roteiro.</div><div class="pag-sub">A gente te conta como chegar até ela.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num verde">15</div><div class="card-info"><div class="card-titulo">O que é o Espetáculo de Som e Luz — e por que você precisa ver</div><span class="card-semana semana-historia">Curiosidade histórica</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Às 20h as Ruínas ganham vida.</div><div class="pag-sub">Projeção histórica sobre pedras de 300 anos.</div><div class="pag-texto">Toda noite as Ruínas recebem um espetáculo que conta a história das Missões.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">A história projetada na própria parede.</div><div class="pag-sub">Missões Jesuíticas em imagens e narrativa.</div><div class="pag-texto">Você senta na frente das Ruínas e assiste a história dos Sete Povos ser contada ali na pedra.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">Quem vem só de dia perde.</div><div class="pag-sub">O espetáculo é só à noite.</div><div class="pag-texto">Turistas que passam de carro e voltam no mesmo dia nunca chegam a ver isso.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Hospeda aqui e não perde nenhum dos dois.</div><div class="pag-sub">Pôr do sol de tarde, espetáculo à noite.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num verde">16</div><div class="card-info"><div class="card-titulo">150 metros do Patrimônio Mundial — a pousada mais perto das Ruínas</div><span class="card-semana semana-historia">Curiosidade histórica</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">150 metros da portaria das Ruínas.</div><div class="pag-sub">Ao lado do Patrimônio Mundial.</div><div class="pag-texto">Não é figura de linguagem. São 150 metros entre a nossa porta e a entrada do sítio arqueológico.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Pôr do sol e ainda volta a pé.</div><div class="pag-sub">Sem carro, sem táxi, sem correria.</div><div class="pag-texto">Você vai pras Ruínas caminhando, fica pro pôr do sol e volta tranquilo. Ninguém te apressando.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">Espetáculo à noite, cama a 150 metros.</div><div class="pag-sub">Termina o show e já tá em casa.</div><div class="pag-texto">Sem precisar pegar carro depois do espetáculo. A pousada fica do lado. É essa a diferença de estar bem localizado.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 4</span><div class="pag-titulo">De manhã cedo, as Ruínas vazias te esperam.</div><div class="pag-sub">150 metros e você está lá antes de todo mundo.</div><div class="pag-texto">Quem dorme aqui acorda, toma café e já entra no sítio com o sol baixo e silêncio total.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Localização que nenhuma outra pousada tem.</div><div class="pag-sub">Reserve pelo WhatsApp.</div><div class="pag-texto">Me chama no WhatsApp ou no direct.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BLOCO 5: AGÊNCIAS -->
+<div class="bloco">
+  <div class="bloco-header b5">
+    <div class="bloco-num">05</div>
+    <div class="bloco-info">
+      <div class="bloco-titulo">AGÊNCIAS E OPERADORES — B2B</div>
+      <div class="bloco-sub">Parceria comercial, datas fortes e argumento UNESCO</div>
+    </div>
+    <div class="bloco-count">Posts 17 e 18</div>
+  </div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top"><div class="card-num marrom">17</div><div class="card-info"><div class="card-titulo">Por que incluir as Missões nos seus roteiros de junho</div><span class="card-semana semana-agencias">Agências / B2B</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Junho nas Missões tem demanda.</div><div class="pag-sub">Dia dos Namorados + São João + feriados.</div><div class="pag-texto">Três datas fortes num só mês. Oportunidade pra quem trabalha com turismo cultural.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Único Patrimônio Mundial do sul.</div><div class="pag-sub">Argumento de venda que vende sozinho.</div><div class="pag-texto">UNESCO 1983. Não tem outro igual no sul do Brasil. Seu cliente não vai questionar.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">Confirmação rápida e comissão garantida.</div><div class="pag-sub">Trabalhamos com agências de RS, SC, PR e SP.</div><div class="pag-texto">Parceria direta, sem burocracia. A gente atende rápido.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 4</span><div class="pag-titulo">Capacidade para grupos.</div><div class="pag-sub">Atendemos comitivas e grupos organizados.</div><div class="pag-texto">Estrutura pra receber grupos com conforto e organização.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Fala com a gente sobre parceria.</div><div class="pag-sub">Atendimento direto, sem intermediário.</div><div class="pag-texto">Me chama no WhatsApp e a gente conversa sobre condições.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-top"><div class="card-num marrom">18</div><div class="card-info"><div class="card-titulo">Como é uma parceria com a Pousada das Missões — pra agências</div><span class="card-semana semana-agencias">Agências / B2B</span></div></div>
+      <div class="paginas"><div class="paginas-label">Páginas do carrossel</div>
+        <div class="pagina"><span class="pag-badge pag-capa">Capa</span><div class="pag-titulo">Ainda fora dos seus pacotes?</div><div class="pag-sub">A pousada parceira em São Miguel das Missões.</div><div class="pag-texto">São Miguel das Missões é o destino cultural mais subaproveitado pelas agências do RS.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 2</span><div class="pag-titulo">Roteiros de 2 e 3 dias prontos.</div><div class="pag-sub">Estruturados e prontos pra vender.</div><div class="pag-texto">Benzimento, Espetáculo, Museu, Fonte, Borrario. Experiências que o cliente conta pra todo mundo e volta a comprar com você.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 3</span><div class="pag-titulo">Atendimento direto com o anfitrião.</div><div class="pag-sub">Sem intermediário, sem espera.</div><div class="pag-texto">Suporte antes e durante a viagem. A gente resolve qualquer imprevisto na hora.</div></div>
+        <div class="pagina"><span class="pag-badge pag-meio">Página 4</span><div class="pag-titulo">Tabela e material de apoio pra sua equipe.</div><div class="pag-sub">Tudo que você precisa pra incluir essa semana.</div><div class="pag-texto">Mando tabela de preços, roteiros prontos e material de apresentação pro seu cliente.</div></div>
+        <div class="pagina"><span class="pag-badge pag-cta">CTA</span><div class="pag-titulo">Vamos conversar sobre parceria?</div><div class="pag-sub">Condições especiais para agências.</div><div class="pag-texto">Me chama no WhatsApp. A gente resolve rápido.</div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+<div class="footer">
+  <div class="footer-txt">Pousada das Missões · <span>@pousadadasmissoes</span> · pousadadasmissoes.com.br · (55) 98161-5722</div>
+</div>
+
+</body>
+</html>
